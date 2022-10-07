@@ -42,5 +42,11 @@ public class CommerceStream extends AppCompatActivity implements View.OnClickLis
         a7 = Double.parseDouble(Point7.getText().toString());
         a8 = a1 + a2 + a3 + a4 + a5 + a6 + a7;
         Results.setText(Double.toString(a8));
+
+        Intent intent = new Intent(this, WebActivity.class);
+        if(a8 >= 17) {
+            startActivity(intent);
+        }
     }
+
 }

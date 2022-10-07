@@ -14,6 +14,7 @@
         <activity android:name=".GeneralscienceStream" />
         <activity android:name=".ServicesStream" />
         <activity android:name=".ScienceStream" />
+        <activity android:name=".WebActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
