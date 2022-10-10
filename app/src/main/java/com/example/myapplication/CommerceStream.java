@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CommerceStream extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,8 +45,18 @@ public class CommerceStream extends AppCompatActivity implements View.OnClickLis
         Results.setText(Double.toString(a8));
 
         Intent intent = new Intent(this, WebActivity.class);
-        if(a8 >= 17) {
+        Intent intent1 = new Intent(this, WebActivity1.class);
+        Intent intent2 = new Intent(this, WebActivity2.class);
+
+        if(a8 >= 17 && a4 >= 3) {
+            Toast.makeText(this, "You qualify fo a National Diploma in Accounting", Toast.LENGTH_SHORT).show();
             startActivity(intent);
+        } else if(a8 >= 14 && a6 == 2){
+            Toast.makeText(this, "You qualify fo an Advanced Certificate in Accounting", Toast.LENGTH_SHORT).show();
+            startActivity(intent1);
+        } else if(a8 < 14){
+            Toast.makeText(this, "Sorry you don't qualify for any course", Toast.LENGTH_SHORT).show();
+            startActivity(intent2);
         }
     }
 
